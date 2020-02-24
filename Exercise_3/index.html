@@ -1,0 +1,36 @@
+<!--
+Author: Peter Elliott       Created:    21/02/2020
+
+		task
+Write a webservice that accepts the an XML document as the payload
+
+The webservice should respond with a status code which is based on parsing the contents of the XML payload
+
+a.	If the XML document is given here is passed then return a status of ‘0’ – which means the document was structured correctly.
+
+b.	If the 0’ then return ‘-1’ – which means invalid command specified.
+
+c.	If the SiteID <> ‘DUB’ then return ‘-2’ – .
+
+			Notes to self
+1. Create a webservice that accepts an XML document
+2. Parse code and display the following message codes:
+	i).    0 Document was structured correctly
+	ii).  -1 If invalid command specified, does this mean xml tags or Declaration Command attribute
+	iii). -2 If the SitID tag does not say DUB it is invalid
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exercise 3</title>
+	<head>
+	<body><center>
+		<form  action="XML_Display.php" method="post" enctype="multipart/form-data">
+			Select XML file to upload:
+			<input type="file" name="fileToUpload" id="fileToUpload"><!-- XML file selection-->
+			<input type="submit" value="Upload file" name="submit">
+		</form><!--XML file will be pasted to XML_Display.php for processing on form submission-->
+	</center>
+	</body>
+</html>
